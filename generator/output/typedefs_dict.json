@@ -1,4 +1,5 @@
 {
+  "EditorContext": "struct EditorContext",
   "EmulateThreeButtonMouse": "struct EmulateThreeButtonMouse",
   "IO": "struct IO",
   "ImVec2": "struct ImVec2",
