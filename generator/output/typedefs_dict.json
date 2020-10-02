@@ -1,0 +1,7 @@
+{
+  "EmulateThreeButtonMouse": "struct EmulateThreeButtonMouse",
+  "IO": "struct IO",
+  "ImVec2": "struct ImVec2",
+  "LinkDetachWithModifierClick": "struct LinkDetachWithModifierClick",
+  "Style": "struct Style"
+}
