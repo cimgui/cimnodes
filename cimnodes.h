@@ -93,9 +93,6 @@ typedef enum {
     AttributeFlags_EnableLinkDetachWithDragClick = 1 << 0,
     AttributeFlags_EnableLinkCreationOnSnap = 1 << 1
 }AttributeFlags;
-struct IO
-{
-};
 struct EmulateThreeButtonMouse
 {
         bool enabled;
@@ -104,6 +101,11 @@ struct EmulateThreeButtonMouse
 struct LinkDetachWithModifierClick
 {
         const bool* modifier;
+};
+struct IO
+{
+    EmulateThreeButtonMouse emulate_three_button_mouse;
+    LinkDetachWithModifierClick link_detach_with_modifier_click;
 };
 struct Style
 {
@@ -206,6 +208,8 @@ CIMGUI_API void imnodes_LoadCurrentEditorStateFromIniFile(const char* file_name)
 CIMGUI_API void imnodes_LoadEditorStateFromIniFile(EditorContext* editor,const char* file_name);
 
 
+//needed for io.link_detach_with_modifier_click.modifier = &ImGui::GetIO().KeyCtrl
+CIMGUI_API bool* getIOKeyCtrlPtr();
 
 #endif //CIMNODES_INCLUDED
 

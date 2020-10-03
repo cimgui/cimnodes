@@ -45,6 +45,8 @@ typedef unsigned __int64 ImU64;
 
 #include "auto_funcs.h"
 
+//needed for io.link_detach_with_modifier_click.modifier = &ImGui::GetIO().KeyCtrl
+CIMGUI_API bool* getIOKeyCtrlPtr();
 
 #endif //CIMNODES_INCLUDED
 

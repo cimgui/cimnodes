@@ -198,7 +198,16 @@
         "type": "const bool*"
       }
     ],
-    "IO": [],
+    "IO": [
+      {
+        "name": "emulate_three_button_mouse",
+        "type": "EmulateThreeButtonMouse"
+      },
+      {
+        "name": "link_detach_with_modifier_click",
+        "type": "LinkDetachWithModifierClick"
+      }
+    ],
     "LinkDetachWithModifierClick": [
       {
         "name": "modifier",

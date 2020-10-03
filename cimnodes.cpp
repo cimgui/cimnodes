@@ -273,4 +273,8 @@ CIMGUI_API void imnodes_LoadEditorStateFromIniFile(EditorContext* editor,const c
 }
 
 
-
+//needed for io.link_detach_with_modifier_click.modifier = &ImGui::GetIO().KeyCtrl
+CIMGUI_API bool* getIOKeyCtrlPtr()
+{
+    return &ImGui::GetIO().KeyCtrl;
+}
