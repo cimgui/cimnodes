@@ -26,114 +26,114 @@
       {
         "calc_value": 1,
         "name": "ColorStyle_NodeBackgroundHovered",
-        "value": 1
+        "value": "1"
       },
       {
         "calc_value": 2,
         "name": "ColorStyle_NodeBackgroundSelected",
-        "value": 2
+        "value": "2"
       },
       {
         "calc_value": 3,
         "name": "ColorStyle_NodeOutline",
-        "value": 3
+        "value": "3"
       },
       {
         "calc_value": 4,
         "name": "ColorStyle_TitleBar",
-        "value": 4
+        "value": "4"
       },
       {
         "calc_value": 5,
         "name": "ColorStyle_TitleBarHovered",
-        "value": 5
+        "value": "5"
       },
       {
         "calc_value": 6,
         "name": "ColorStyle_TitleBarSelected",
-        "value": 6
+        "value": "6"
       },
       {
         "calc_value": 7,
         "name": "ColorStyle_Link",
-        "value": 7
+        "value": "7"
       },
       {
         "calc_value": 8,
         "name": "ColorStyle_LinkHovered",
-        "value": 8
+        "value": "8"
       },
       {
         "calc_value": 9,
         "name": "ColorStyle_LinkSelected",
-        "value": 9
+        "value": "9"
       },
       {
         "calc_value": 10,
         "name": "ColorStyle_Pin",
-        "value": 10
+        "value": "10"
       },
       {
         "calc_value": 11,
         "name": "ColorStyle_PinHovered",
-        "value": 11
+        "value": "11"
       },
       {
         "calc_value": 12,
         "name": "ColorStyle_BoxSelector",
-        "value": 12
+        "value": "12"
       },
       {
         "calc_value": 13,
         "name": "ColorStyle_BoxSelectorOutline",
-        "value": 13
+        "value": "13"
       },
       {
         "calc_value": 14,
         "name": "ColorStyle_GridBackground",
-        "value": 14
+        "value": "14"
       },
       {
         "calc_value": 15,
         "name": "ColorStyle_GridLine",
-        "value": 15
+        "value": "15"
       },
       {
         "calc_value": 16,
         "name": "ColorStyle_Count",
-        "value": 16
+        "value": "16"
       }
     ],
     "PinShape": [
       {
         "calc_value": 0,
         "name": "PinShape_Circle",
-        "value": 0
+        "value": "0"
       },
       {
         "calc_value": 1,
         "name": "PinShape_CircleFilled",
-        "value": 1
+        "value": "1"
       },
       {
         "calc_value": 2,
         "name": "PinShape_Triangle",
-        "value": 2
+        "value": "2"
       },
       {
         "calc_value": 3,
         "name": "PinShape_TriangleFilled",
-        "value": 3
+        "value": "3"
       },
       {
         "calc_value": 4,
         "name": "PinShape_Quad",
-        "value": 4
+        "value": "4"
       },
       {
         "calc_value": 5,
         "name": "PinShape_QuadFilled",
-        "value": 5
+        "value": "5"
       }
     ],
     "StyleFlags": [
@@ -162,17 +162,17 @@
       {
         "calc_value": 1,
         "name": "StyleVar_NodeCornerRounding",
-        "value": 1
+        "value": "1"
       },
       {
         "calc_value": 2,
         "name": "StyleVar_NodePaddingHorizontal",
-        "value": 2
+        "value": "2"
       },
       {
         "calc_value": 3,
         "name": "StyleVar_NodePaddingVertical",
-        "value": 3
+        "value": "3"
       }
     ]
   },
