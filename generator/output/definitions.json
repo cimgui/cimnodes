@@ -717,11 +717,11 @@
           "type": "int*"
         }
       ],
-      "argsoriginal": "(int* attribute_id=0)",
+      "argsoriginal": "(int* attribute_id=((void*)0))",
       "call_args": "(attribute_id)",
       "cimguiname": "imnodes_IsAnyAttributeActive",
       "defaults": {
-        "attribute_id": "0"
+        "attribute_id": "((void*)0)"
       },
       "funcname": "IsAnyAttributeActive",
       "location": "imnodes:259",
@@ -783,11 +783,11 @@
           "type": "bool*"
         }
       ],
-      "argsoriginal": "(int* started_at_attribute_id,int* ended_at_attribute_id,bool* created_from_snap=0)",
+      "argsoriginal": "(int* started_at_attribute_id,int* ended_at_attribute_id,bool* created_from_snap=((void*)0))",
       "call_args": "(started_at_attribute_id,ended_at_attribute_id,created_from_snap)",
       "cimguiname": "imnodes_IsLinkCreated",
       "defaults": {
-        "created_from_snap": "0"
+        "created_from_snap": "((void*)0)"
       },
       "funcname": "IsLinkCreated",
       "location": "imnodes:274",
@@ -821,11 +821,11 @@
           "type": "bool*"
         }
       ],
-      "argsoriginal": "(int* started_at_node_id,int* started_at_attribute_id,int* ended_at_node_id,int* ended_at_attribute_id,bool* created_from_snap=0)",
+      "argsoriginal": "(int* started_at_node_id,int* started_at_attribute_id,int* ended_at_node_id,int* ended_at_attribute_id,bool* created_from_snap=((void*)0))",
       "call_args": "(started_at_node_id,started_at_attribute_id,ended_at_node_id,ended_at_attribute_id,created_from_snap)",
       "cimguiname": "imnodes_IsLinkCreated",
       "defaults": {
-        "created_from_snap": "0"
+        "created_from_snap": "((void*)0)"
       },
       "funcname": "IsLinkCreated",
       "location": "imnodes:278",
@@ -871,12 +871,12 @@
           "type": "bool"
         }
       ],
-      "argsoriginal": "(int* started_at_attribute_id=0,bool including_detached_links=true)",
+      "argsoriginal": "(int* started_at_attribute_id=((void*)0),bool including_detached_links=true)",
       "call_args": "(started_at_attribute_id,including_detached_links)",
       "cimguiname": "imnodes_IsLinkDropped",
       "defaults": {
         "including_detached_links": "true",
-        "started_at_attribute_id": "0"
+        "started_at_attribute_id": "((void*)0)"
       },
       "funcname": "IsLinkDropped",
       "location": "imnodes:272",
