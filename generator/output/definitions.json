@@ -548,6 +548,87 @@
       "stname": ""
     }
   ],
+  "imnodes_GetNodeEditorSpacePos": [
+    {
+      "args": "(ImVec2 *pOut,const int node_id)",
+      "argsT": [
+        {
+          "name": "pOut",
+          "type": "ImVec2*"
+        },
+        {
+          "name": "node_id",
+          "type": "const int"
+        }
+      ],
+      "argsoriginal": "(const int node_id)",
+      "call_args": "(node_id)",
+      "cimguiname": "imnodes_GetNodeEditorSpacePos",
+      "defaults": {},
+      "funcname": "GetNodeEditorSpacePos",
+      "location": "imnodes:232",
+      "namespace": "imnodes",
+      "nonUDT": 1,
+      "ov_cimguiname": "imnodes_GetNodeEditorSpacePos",
+      "ret": "void",
+      "signature": "(const int)",
+      "stname": ""
+    }
+  ],
+  "imnodes_GetNodeGridSpacePos": [
+    {
+      "args": "(ImVec2 *pOut,const int node_id)",
+      "argsT": [
+        {
+          "name": "pOut",
+          "type": "ImVec2*"
+        },
+        {
+          "name": "node_id",
+          "type": "const int"
+        }
+      ],
+      "argsoriginal": "(const int node_id)",
+      "call_args": "(node_id)",
+      "cimguiname": "imnodes_GetNodeGridSpacePos",
+      "defaults": {},
+      "funcname": "GetNodeGridSpacePos",
+      "location": "imnodes:233",
+      "namespace": "imnodes",
+      "nonUDT": 1,
+      "ov_cimguiname": "imnodes_GetNodeGridSpacePos",
+      "ret": "void",
+      "signature": "(const int)",
+      "stname": ""
+    }
+  ],
+  "imnodes_GetNodeScreenSpacePos": [
+    {
+      "args": "(ImVec2 *pOut,const int node_id)",
+      "argsT": [
+        {
+          "name": "pOut",
+          "type": "ImVec2*"
+        },
+        {
+          "name": "node_id",
+          "type": "const int"
+        }
+      ],
+      "argsoriginal": "(const int node_id)",
+      "call_args": "(node_id)",
+      "cimguiname": "imnodes_GetNodeScreenSpacePos",
+      "defaults": {},
+      "funcname": "GetNodeScreenSpacePos",
+      "location": "imnodes:231",
+      "namespace": "imnodes",
+      "nonUDT": 1,
+      "ov_cimguiname": "imnodes_GetNodeScreenSpacePos",
+      "ret": "void",
+      "signature": "(const int)",
+      "stname": ""
+    }
+  ],
   "imnodes_GetSelectedLinks": [
     {
       "args": "(int* link_ids)",
@@ -562,7 +643,7 @@
       "cimguiname": "imnodes_GetSelectedLinks",
       "defaults": {},
       "funcname": "GetSelectedLinks",
-      "location": "imnodes:246",
+      "location": "imnodes:253",
       "namespace": "imnodes",
       "ov_cimguiname": "imnodes_GetSelectedLinks",
       "ret": "void",
@@ -584,7 +665,7 @@
       "cimguiname": "imnodes_GetSelectedNodes",
       "defaults": {},
       "funcname": "GetSelectedNodes",
-      "location": "imnodes:245",
+      "location": "imnodes:252",
       "namespace": "imnodes",
       "ov_cimguiname": "imnodes_GetSelectedNodes",
       "ret": "void",
@@ -643,7 +724,7 @@
         "attribute_id": "0"
       },
       "funcname": "IsAnyAttributeActive",
-      "location": "imnodes:252",
+      "location": "imnodes:259",
       "namespace": "imnodes",
       "ov_cimguiname": "imnodes_IsAnyAttributeActive",
       "ret": "bool",
@@ -660,7 +741,7 @@
       "cimguiname": "imnodes_IsAttributeActive",
       "defaults": {},
       "funcname": "IsAttributeActive",
-      "location": "imnodes:250",
+      "location": "imnodes:257",
       "namespace": "imnodes",
       "ov_cimguiname": "imnodes_IsAttributeActive",
       "ret": "bool",
@@ -677,7 +758,7 @@
       "cimguiname": "imnodes_IsEditorHovered",
       "defaults": {},
       "funcname": "IsEditorHovered",
-      "location": "imnodes:230",
+      "location": "imnodes:237",
       "namespace": "imnodes",
       "ov_cimguiname": "imnodes_IsEditorHovered",
       "ret": "bool",
@@ -709,11 +790,49 @@
         "created_from_snap": "0"
       },
       "funcname": "IsLinkCreated",
-      "location": "imnodes:267",
+      "location": "imnodes:274",
       "namespace": "imnodes",
-      "ov_cimguiname": "imnodes_IsLinkCreated",
+      "ov_cimguiname": "imnodes_IsLinkCreatedBoolPtr",
       "ret": "bool",
       "signature": "(int*,int*,bool*)",
+      "stname": ""
+    },
+    {
+      "args": "(int* started_at_node_id,int* started_at_attribute_id,int* ended_at_node_id,int* ended_at_attribute_id,bool* created_from_snap)",
+      "argsT": [
+        {
+          "name": "started_at_node_id",
+          "type": "int*"
+        },
+        {
+          "name": "started_at_attribute_id",
+          "type": "int*"
+        },
+        {
+          "name": "ended_at_node_id",
+          "type": "int*"
+        },
+        {
+          "name": "ended_at_attribute_id",
+          "type": "int*"
+        },
+        {
+          "name": "created_from_snap",
+          "type": "bool*"
+        }
+      ],
+      "argsoriginal": "(int* started_at_node_id,int* started_at_attribute_id,int* ended_at_node_id,int* ended_at_attribute_id,bool* created_from_snap=0)",
+      "call_args": "(started_at_node_id,started_at_attribute_id,ended_at_node_id,ended_at_attribute_id,created_from_snap)",
+      "cimguiname": "imnodes_IsLinkCreated",
+      "defaults": {
+        "created_from_snap": "0"
+      },
+      "funcname": "IsLinkCreated",
+      "location": "imnodes:278",
+      "namespace": "imnodes",
+      "ov_cimguiname": "imnodes_IsLinkCreatedIntPtr",
+      "ret": "bool",
+      "signature": "(int*,int*,int*,int*,bool*)",
       "stname": ""
     }
   ],
@@ -731,7 +850,7 @@
       "cimguiname": "imnodes_IsLinkDestroyed",
       "defaults": {},
       "funcname": "IsLinkDestroyed",
-      "location": "imnodes:273",
+      "location": "imnodes:287",
       "namespace": "imnodes",
       "ov_cimguiname": "imnodes_IsLinkDestroyed",
       "ret": "bool",
@@ -760,7 +879,7 @@
         "started_at_attribute_id": "0"
       },
       "funcname": "IsLinkDropped",
-      "location": "imnodes:265",
+      "location": "imnodes:272",
       "namespace": "imnodes",
       "ov_cimguiname": "imnodes_IsLinkDropped",
       "ret": "bool",
@@ -782,7 +901,7 @@
       "cimguiname": "imnodes_IsLinkHovered",
       "defaults": {},
       "funcname": "IsLinkHovered",
-      "location": "imnodes:235",
+      "location": "imnodes:242",
       "namespace": "imnodes",
       "ov_cimguiname": "imnodes_IsLinkHovered",
       "ret": "bool",
@@ -804,7 +923,7 @@
       "cimguiname": "imnodes_IsLinkStarted",
       "defaults": {},
       "funcname": "IsLinkStarted",
-      "location": "imnodes:258",
+      "location": "imnodes:265",
       "namespace": "imnodes",
       "ov_cimguiname": "imnodes_IsLinkStarted",
       "ret": "bool",
@@ -826,7 +945,7 @@
       "cimguiname": "imnodes_IsNodeHovered",
       "defaults": {},
       "funcname": "IsNodeHovered",
-      "location": "imnodes:234",
+      "location": "imnodes:241",
       "namespace": "imnodes",
       "ov_cimguiname": "imnodes_IsNodeHovered",
       "ret": "bool",
@@ -848,7 +967,7 @@
       "cimguiname": "imnodes_IsPinHovered",
       "defaults": {},
       "funcname": "IsPinHovered",
-      "location": "imnodes:236",
+      "location": "imnodes:243",
       "namespace": "imnodes",
       "ov_cimguiname": "imnodes_IsPinHovered",
       "ret": "bool",
@@ -900,7 +1019,7 @@
       "cimguiname": "imnodes_LoadCurrentEditorStateFromIniFile",
       "defaults": {},
       "funcname": "LoadCurrentEditorStateFromIniFile",
-      "location": "imnodes:287",
+      "location": "imnodes:301",
       "namespace": "imnodes",
       "ov_cimguiname": "imnodes_LoadCurrentEditorStateFromIniFile",
       "ret": "void",
@@ -926,7 +1045,7 @@
       "cimguiname": "imnodes_LoadCurrentEditorStateFromIniString",
       "defaults": {},
       "funcname": "LoadCurrentEditorStateFromIniString",
-      "location": "imnodes:281",
+      "location": "imnodes:295",
       "namespace": "imnodes",
       "ov_cimguiname": "imnodes_LoadCurrentEditorStateFromIniString",
       "ret": "void",
@@ -952,7 +1071,7 @@
       "cimguiname": "imnodes_LoadEditorStateFromIniFile",
       "defaults": {},
       "funcname": "LoadEditorStateFromIniFile",
-      "location": "imnodes:288",
+      "location": "imnodes:302",
       "namespace": "imnodes",
       "ov_cimguiname": "imnodes_LoadEditorStateFromIniFile",
       "ret": "void",
@@ -982,7 +1101,7 @@
       "cimguiname": "imnodes_LoadEditorStateFromIniString",
       "defaults": {},
       "funcname": "LoadEditorStateFromIniString",
-      "location": "imnodes:282",
+      "location": "imnodes:296",
       "namespace": "imnodes",
       "ov_cimguiname": "imnodes_LoadEditorStateFromIniString",
       "ret": "void",
@@ -999,7 +1118,7 @@
       "cimguiname": "imnodes_NumSelectedLinks",
       "defaults": {},
       "funcname": "NumSelectedLinks",
-      "location": "imnodes:241",
+      "location": "imnodes:248",
       "namespace": "imnodes",
       "ov_cimguiname": "imnodes_NumSelectedLinks",
       "ret": "int",
@@ -1016,7 +1135,7 @@
       "cimguiname": "imnodes_NumSelectedNodes",
       "defaults": {},
       "funcname": "NumSelectedNodes",
-      "location": "imnodes:240",
+      "location": "imnodes:247",
       "namespace": "imnodes",
       "ov_cimguiname": "imnodes_NumSelectedNodes",
       "ret": "int",
@@ -1163,7 +1282,7 @@
       "cimguiname": "imnodes_SaveCurrentEditorStateToIniFile",
       "defaults": {},
       "funcname": "SaveCurrentEditorStateToIniFile",
-      "location": "imnodes:284",
+      "location": "imnodes:298",
       "namespace": "imnodes",
       "ov_cimguiname": "imnodes_SaveCurrentEditorStateToIniFile",
       "ret": "void",
@@ -1187,7 +1306,7 @@
         "data_size": "((void*)0)"
       },
       "funcname": "SaveCurrentEditorStateToIniString",
-      "location": "imnodes:278",
+      "location": "imnodes:292",
       "namespace": "imnodes",
       "ov_cimguiname": "imnodes_SaveCurrentEditorStateToIniString",
       "ret": "const char*",
@@ -1213,7 +1332,7 @@
       "cimguiname": "imnodes_SaveEditorStateToIniFile",
       "defaults": {},
       "funcname": "SaveEditorStateToIniFile",
-      "location": "imnodes:285",
+      "location": "imnodes:299",
       "namespace": "imnodes",
       "ov_cimguiname": "imnodes_SaveEditorStateToIniFile",
       "ret": "void",
@@ -1241,7 +1360,7 @@
         "data_size": "((void*)0)"
       },
       "funcname": "SaveEditorStateToIniString",
-      "location": "imnodes:279",
+      "location": "imnodes:293",
       "namespace": "imnodes",
       "ov_cimguiname": "imnodes_SaveEditorStateToIniString",
       "ret": "const char*",
@@ -1267,11 +1386,37 @@
       "cimguiname": "imnodes_SetNodeDraggable",
       "defaults": {},
       "funcname": "SetNodeDraggable",
-      "location": "imnodes:226",
+      "location": "imnodes:227",
       "namespace": "imnodes",
       "ov_cimguiname": "imnodes_SetNodeDraggable",
       "ret": "void",
       "signature": "(int,const bool)",
+      "stname": ""
+    }
+  ],
+  "imnodes_SetNodeEditorSpacePos": [
+    {
+      "args": "(int node_id,const ImVec2 editor_space_pos)",
+      "argsT": [
+        {
+          "name": "node_id",
+          "type": "int"
+        },
+        {
+          "name": "editor_space_pos",
+          "type": "const ImVec2"
+        }
+      ],
+      "argsoriginal": "(int node_id,const ImVec2& editor_space_pos)",
+      "call_args": "(node_id,editor_space_pos)",
+      "cimguiname": "imnodes_SetNodeEditorSpacePos",
+      "defaults": {},
+      "funcname": "SetNodeEditorSpacePos",
+      "location": "imnodes:224",
+      "namespace": "imnodes",
+      "ov_cimguiname": "imnodes_SetNodeEditorSpacePos",
+      "ret": "void",
+      "signature": "(int,const ImVec2)",
       "stname": ""
     }
   ],
@@ -1293,7 +1438,7 @@
       "cimguiname": "imnodes_SetNodeGridSpacePos",
       "defaults": {},
       "funcname": "SetNodeGridSpacePos",
-      "location": "imnodes:224",
+      "location": "imnodes:225",
       "namespace": "imnodes",
       "ov_cimguiname": "imnodes_SetNodeGridSpacePos",
       "ret": "void",

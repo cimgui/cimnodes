@@ -175,6 +175,10 @@ CIMGUI_API void imnodes_SetNodeScreenSpacePos(int node_id,const ImVec2 screen_sp
 {
     return imnodes::SetNodeScreenSpacePos(node_id,screen_space_pos);
 }
+CIMGUI_API void imnodes_SetNodeEditorSpacePos(int node_id,const ImVec2 editor_space_pos)
+{
+    return imnodes::SetNodeEditorSpacePos(node_id,editor_space_pos);
+}
 CIMGUI_API void imnodes_SetNodeGridSpacePos(int node_id,const ImVec2 grid_pos)
 {
     return imnodes::SetNodeGridSpacePos(node_id,grid_pos);
@@ -182,6 +186,18 @@ CIMGUI_API void imnodes_SetNodeGridSpacePos(int node_id,const ImVec2 grid_pos)
 CIMGUI_API void imnodes_SetNodeDraggable(int node_id,const bool draggable)
 {
     return imnodes::SetNodeDraggable(node_id,draggable);
+}
+CIMGUI_API void imnodes_GetNodeScreenSpacePos(ImVec2 *pOut,const int node_id)
+{
+    *pOut = imnodes::GetNodeScreenSpacePos(node_id);
+}
+CIMGUI_API void imnodes_GetNodeEditorSpacePos(ImVec2 *pOut,const int node_id)
+{
+    *pOut = imnodes::GetNodeEditorSpacePos(node_id);
+}
+CIMGUI_API void imnodes_GetNodeGridSpacePos(ImVec2 *pOut,const int node_id)
+{
+    *pOut = imnodes::GetNodeGridSpacePos(node_id);
 }
 CIMGUI_API bool imnodes_IsEditorHovered()
 {
@@ -231,9 +247,13 @@ CIMGUI_API bool imnodes_IsLinkDropped(int* started_at_attribute_id,bool includin
 {
     return imnodes::IsLinkDropped(started_at_attribute_id,including_detached_links);
 }
-CIMGUI_API bool imnodes_IsLinkCreated(int* started_at_attribute_id,int* ended_at_attribute_id,bool* created_from_snap)
+CIMGUI_API bool imnodes_IsLinkCreatedBoolPtr(int* started_at_attribute_id,int* ended_at_attribute_id,bool* created_from_snap)
 {
     return imnodes::IsLinkCreated(started_at_attribute_id,ended_at_attribute_id,created_from_snap);
+}
+CIMGUI_API bool imnodes_IsLinkCreatedIntPtr(int* started_at_node_id,int* started_at_attribute_id,int* ended_at_node_id,int* ended_at_attribute_id,bool* created_from_snap)
+{
+    return imnodes::IsLinkCreated(started_at_node_id,started_at_attribute_id,ended_at_node_id,ended_at_attribute_id,created_from_snap);
 }
 CIMGUI_API bool imnodes_IsLinkDestroyed(int* link_id)
 {

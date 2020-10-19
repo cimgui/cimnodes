@@ -1,2 +1,5 @@
 ----------------overloadings---------------------------
-0 overloaded
+imnodes_IsLinkCreated	2
+1	bool	imnodes_IsLinkCreatedBoolPtr (int*,int*,bool*)
+2	bool	imnodes_IsLinkCreatedIntPtr (int*,int*,int*,int*,bool*)
+2 overloaded
