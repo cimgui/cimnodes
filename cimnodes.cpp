@@ -171,6 +171,10 @@ CIMGUI_API void imnodes_Link(int id,int start_attribute_id,int end_attribute_id)
 {
     return imnodes::Link(id,start_attribute_id,end_attribute_id);
 }
+CIMGUI_API void imnodes_SetNodeDraggable(int node_id,const bool draggable)
+{
+    return imnodes::SetNodeDraggable(node_id,draggable);
+}
 CIMGUI_API void imnodes_SetNodeScreenSpacePos(int node_id,const ImVec2 screen_space_pos)
 {
     return imnodes::SetNodeScreenSpacePos(node_id,screen_space_pos);
@@ -182,10 +186,6 @@ CIMGUI_API void imnodes_SetNodeEditorSpacePos(int node_id,const ImVec2 editor_sp
 CIMGUI_API void imnodes_SetNodeGridSpacePos(int node_id,const ImVec2 grid_pos)
 {
     return imnodes::SetNodeGridSpacePos(node_id,grid_pos);
-}
-CIMGUI_API void imnodes_SetNodeDraggable(int node_id,const bool draggable)
-{
-    return imnodes::SetNodeDraggable(node_id,draggable);
 }
 CIMGUI_API void imnodes_GetNodeScreenSpacePos(ImVec2 *pOut,const int node_id)
 {
