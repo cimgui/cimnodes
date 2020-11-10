@@ -173,18 +173,68 @@
         "calc_value": 3,
         "name": "StyleVar_NodePaddingVertical",
         "value": "3"
+      },
+      {
+        "calc_value": 4,
+        "name": "StyleVar_NodeBorderThickness",
+        "value": "4"
+      },
+      {
+        "calc_value": 5,
+        "name": "StyleVar_LinkThickness",
+        "value": "5"
+      },
+      {
+        "calc_value": 6,
+        "name": "StyleVar_LinkLineSegmentsPerLength",
+        "value": "6"
+      },
+      {
+        "calc_value": 7,
+        "name": "StyleVar_LinkHoverDistance",
+        "value": "7"
+      },
+      {
+        "calc_value": 8,
+        "name": "StyleVar_PinCircleRadius",
+        "value": "8"
+      },
+      {
+        "calc_value": 9,
+        "name": "StyleVar_PinQuadSideLength",
+        "value": "9"
+      },
+      {
+        "calc_value": 10,
+        "name": "StyleVar_PinTriangleSideLength",
+        "value": "10"
+      },
+      {
+        "calc_value": 11,
+        "name": "StyleVar_PinLineThickness",
+        "value": "11"
+      },
+      {
+        "calc_value": 12,
+        "name": "StyleVar_PinHoverRadius",
+        "value": "12"
+      },
+      {
+        "calc_value": 13,
+        "name": "StyleVar_PinOffset",
+        "value": "13"
       }
     ]
   },
   "locations": {
-    "AttributeFlags": "imnodes:57",
+    "AttributeFlags": "imnodes:67",
     "ColorStyle": "imnodes:9",
-    "EmulateThreeButtonMouse": "imnodes:74",
-    "IO": "imnodes:72",
-    "LinkDetachWithModifierClick": "imnodes:84",
-    "PinShape": "imnodes:46",
-    "Style": "imnodes:101",
-    "StyleFlags": "imnodes:38",
+    "EmulateThreeButtonMouse": "imnodes:84",
+    "IO": "imnodes:82",
+    "LinkDetachWithModifierClick": "imnodes:94",
+    "PinShape": "imnodes:56",
+    "Style": "imnodes:111",
+    "StyleFlags": "imnodes:48",
     "StyleVar": "imnodes:30"
   },
   "structs": {
@@ -229,6 +279,10 @@
       },
       {
         "name": "node_padding_vertical",
+        "type": "float"
+      },
+      {
+        "name": "node_border_thickness",
         "type": "float"
       },
       {

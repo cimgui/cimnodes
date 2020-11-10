@@ -231,6 +231,14 @@ CIMGUI_API void imnodes_GetSelectedLinks(int* link_ids)
 {
     return imnodes::GetSelectedLinks(link_ids);
 }
+CIMGUI_API void imnodes_ClearNodeSelection()
+{
+    return imnodes::ClearNodeSelection();
+}
+CIMGUI_API void imnodes_ClearLinkSelection()
+{
+    return imnodes::ClearLinkSelection();
+}
 CIMGUI_API bool imnodes_IsAttributeActive()
 {
     return imnodes::IsAttributeActive();

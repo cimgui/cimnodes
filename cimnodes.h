@@ -73,7 +73,17 @@ typedef enum {
     StyleVar_GridSpacing = 0,
     StyleVar_NodeCornerRounding,
     StyleVar_NodePaddingHorizontal,
-    StyleVar_NodePaddingVertical
+    StyleVar_NodePaddingVertical,
+    StyleVar_NodeBorderThickness,
+    StyleVar_LinkThickness,
+    StyleVar_LinkLineSegmentsPerLength,
+    StyleVar_LinkHoverDistance,
+    StyleVar_PinCircleRadius,
+    StyleVar_PinQuadSideLength,
+    StyleVar_PinTriangleSideLength,
+    StyleVar_PinLineThickness,
+    StyleVar_PinHoverRadius,
+    StyleVar_PinOffset
 }StyleVar;
 typedef enum {
     StyleFlags_None = 0,
@@ -113,6 +123,7 @@ struct Style
     float node_corner_rounding;
     float node_padding_horizontal;
     float node_padding_vertical;
+    float node_border_thickness;
     float link_thickness;
     float link_line_segments_per_length;
     float link_hover_distance;
@@ -196,6 +207,8 @@ CIMGUI_API int imnodes_NumSelectedNodes(void);
 CIMGUI_API int imnodes_NumSelectedLinks(void);
 CIMGUI_API void imnodes_GetSelectedNodes(int* node_ids);
 CIMGUI_API void imnodes_GetSelectedLinks(int* link_ids);
+CIMGUI_API void imnodes_ClearNodeSelection(void);
+CIMGUI_API void imnodes_ClearLinkSelection(void);
 CIMGUI_API bool imnodes_IsAttributeActive(void);
 CIMGUI_API bool imnodes_IsAnyAttributeActive(int* attribute_id);
 CIMGUI_API bool imnodes_IsLinkStarted(int* started_at_attribute_id);
