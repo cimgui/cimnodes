@@ -226,6 +226,7 @@
       }
     ]
   },
+  "enumtypes": [],
   "locations": {
     "AttributeFlags": "imnodes:67",
     "ColorStyle": "imnodes:9",

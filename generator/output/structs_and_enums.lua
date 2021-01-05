@@ -177,6 +177,7 @@ defs["enums"]["StyleVar"][14] = {}
 defs["enums"]["StyleVar"][14]["calc_value"] = 13
 defs["enums"]["StyleVar"][14]["name"] = "StyleVar_PinOffset"
 defs["enums"]["StyleVar"][14]["value"] = "13"
+defs["enumtypes"] = {}
 defs["locations"] = {}
 defs["locations"]["AttributeFlags"] = "imnodes:67"
 defs["locations"]["ColorStyle"] = "imnodes:9"
