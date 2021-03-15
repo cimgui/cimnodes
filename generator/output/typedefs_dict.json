@@ -2,6 +2,7 @@
   "EditorContext": "struct EditorContext",
   "EmulateThreeButtonMouse": "struct EmulateThreeButtonMouse",
   "IO": "struct IO",
+  "ImGuiContext": "struct ImGuiContext",
   "ImVec2": "struct ImVec2",
   "LinkDetachWithModifierClick": "struct LinkDetachWithModifierClick",
   "Style": "struct Style"

@@ -71,6 +71,10 @@ CIMGUI_API void imnodes_Shutdown()
 {
     return imnodes::Shutdown();
 }
+CIMGUI_API void imnodes_SetImGuiContext(ImGuiContext* ctx)
+{
+    return imnodes::SetImGuiContext(ctx);
+}
 CIMGUI_API IO* imnodes_GetIO()
 {
     return &imnodes::GetIO();
