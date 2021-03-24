@@ -1,4 +1,5 @@
 local defs = {}
+defs["Context"] = "struct Context"
 defs["EditorContext"] = "struct EditorContext"
 defs["EmulateThreeButtonMouse"] = "struct EmulateThreeButtonMouse"
 defs["IO"] = "struct IO"

@@ -39,6 +39,26 @@ CIMGUI_API void Style_destroy(Style* self)
 {
     IM_DELETE(self);
 }
+CIMGUI_API void imnodes_SetImGuiContext(ImGuiContext* ctx)
+{
+    return imnodes::SetImGuiContext(ctx);
+}
+CIMGUI_API Context* imnodes_CreateContext()
+{
+    return imnodes::CreateContext();
+}
+CIMGUI_API void imnodes_DestroyContext(Context* ctx)
+{
+    return imnodes::DestroyContext(ctx);
+}
+CIMGUI_API Context* imnodes_GetCurrentContext()
+{
+    return imnodes::GetCurrentContext();
+}
+CIMGUI_API void imnodes_SetCurrentContext(Context* ctx)
+{
+    return imnodes::SetCurrentContext(ctx);
+}
 CIMGUI_API EditorContext* imnodes_EditorContextCreate()
 {
     return imnodes::EditorContextCreate();
@@ -62,18 +82,6 @@ CIMGUI_API void imnodes_EditorContextResetPanning(const ImVec2 pos)
 CIMGUI_API void imnodes_EditorContextMoveToNode(const int node_id)
 {
     return imnodes::EditorContextMoveToNode(node_id);
-}
-CIMGUI_API void imnodes_Initialize()
-{
-    return imnodes::Initialize();
-}
-CIMGUI_API void imnodes_Shutdown()
-{
-    return imnodes::Shutdown();
-}
-CIMGUI_API void imnodes_SetImGuiContext(ImGuiContext* ctx)
-{
-    return imnodes::SetImGuiContext(ctx);
 }
 CIMGUI_API IO* imnodes_GetIO()
 {

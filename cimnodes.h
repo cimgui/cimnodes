@@ -42,6 +42,7 @@ typedef unsigned __int64 ImU64;
 
 #ifdef CIMGUI_DEFINE_ENUMS_AND_STRUCTS
 typedef struct EditorContext EditorContext;
+typedef struct Context Context;
 typedef struct Style Style;
 typedef struct LinkDetachWithModifierClick LinkDetachWithModifierClick;
 typedef struct EmulateThreeButtonMouse EmulateThreeButtonMouse;
@@ -51,6 +52,7 @@ typedef struct ImGuiContext ImGuiContext;
 
 struct ImGuiContext;
 struct ImVec2;
+struct Context;
 struct EditorContext;
 typedef enum {
     ColorStyle_NodeBackground = 0,
@@ -142,6 +144,7 @@ struct Style
 #endif // CIMGUI_DEFINE_ENUMS_AND_STRUCTS
 
 #ifndef CIMGUI_DEFINE_ENUMS_AND_STRUCTS
+typedef imnodes::Context Context;
 typedef imnodes::EditorContext EditorContext;
 typedef imnodes::IO::EmulateThreeButtonMouse EmulateThreeButtonMouse;
 typedef imnodes::IO IO;
@@ -161,15 +164,17 @@ CIMGUI_API IO* IO_IO(void);
 CIMGUI_API void IO_destroy(IO* self);
 CIMGUI_API Style* Style_Style(void);
 CIMGUI_API void Style_destroy(Style* self);
+CIMGUI_API void imnodes_SetImGuiContext(ImGuiContext* ctx);
+CIMGUI_API Context* imnodes_CreateContext(void);
+CIMGUI_API void imnodes_DestroyContext(Context* ctx);
+CIMGUI_API Context* imnodes_GetCurrentContext(void);
+CIMGUI_API void imnodes_SetCurrentContext(Context* ctx);
 CIMGUI_API EditorContext* imnodes_EditorContextCreate(void);
 CIMGUI_API void imnodes_EditorContextFree(EditorContext* noname1);
 CIMGUI_API void imnodes_EditorContextSet(EditorContext* noname1);
 CIMGUI_API void imnodes_EditorContextGetPanning(ImVec2 *pOut);
 CIMGUI_API void imnodes_EditorContextResetPanning(const ImVec2 pos);
 CIMGUI_API void imnodes_EditorContextMoveToNode(const int node_id);
-CIMGUI_API void imnodes_Initialize(void);
-CIMGUI_API void imnodes_Shutdown(void);
-CIMGUI_API void imnodes_SetImGuiContext(ImGuiContext* ctx);
 CIMGUI_API IO* imnodes_GetIO(void);
 CIMGUI_API Style* imnodes_GetStyle(void);
 CIMGUI_API void imnodes_StyleColorsDark(void);
