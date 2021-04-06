@@ -267,11 +267,11 @@ CIMGUI_API bool imnodes_IsLinkDropped(int* started_at_attribute_id,bool includin
 {
     return imnodes::IsLinkDropped(started_at_attribute_id,including_detached_links);
 }
-CIMGUI_API bool imnodes_IsLinkCreatedBoolPtr(int* started_at_attribute_id,int* ended_at_attribute_id,bool* created_from_snap)
+CIMGUI_API bool imnodes_IsLinkCreated_BoolPtr(int* started_at_attribute_id,int* ended_at_attribute_id,bool* created_from_snap)
 {
     return imnodes::IsLinkCreated(started_at_attribute_id,ended_at_attribute_id,created_from_snap);
 }
-CIMGUI_API bool imnodes_IsLinkCreatedIntPtr(int* started_at_node_id,int* started_at_attribute_id,int* ended_at_node_id,int* ended_at_attribute_id,bool* created_from_snap)
+CIMGUI_API bool imnodes_IsLinkCreated_IntPtr(int* started_at_node_id,int* started_at_attribute_id,int* ended_at_node_id,int* ended_at_attribute_id,bool* created_from_snap)
 {
     return imnodes::IsLinkCreated(started_at_node_id,started_at_attribute_id,ended_at_node_id,ended_at_attribute_id,created_from_snap);
 }
