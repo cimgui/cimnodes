@@ -23,19 +23,19 @@ CIMGUI_API void LinkDetachWithModifierClick_destroy(LinkDetachWithModifierClick*
 {
     IM_DELETE(self);
 }
-CIMGUI_API IO* IO_IO(void)
+CIMGUI_API ImNodesIO* ImNodesIO_ImNodesIO(void)
 {
-    return IM_NEW(IO)();
+    return IM_NEW(ImNodesIO)();
 }
-CIMGUI_API void IO_destroy(IO* self)
+CIMGUI_API void ImNodesIO_destroy(ImNodesIO* self)
 {
     IM_DELETE(self);
 }
-CIMGUI_API Style* Style_Style(void)
+CIMGUI_API ImNodesStyle* ImNodesStyle_ImNodesStyle(void)
 {
-    return IM_NEW(Style)();
+    return IM_NEW(ImNodesStyle)();
 }
-CIMGUI_API void Style_destroy(Style* self)
+CIMGUI_API void ImNodesStyle_destroy(ImNodesStyle* self)
 {
     IM_DELETE(self);
 }
@@ -43,31 +43,31 @@ CIMGUI_API void imnodes_SetImGuiContext(ImGuiContext* ctx)
 {
     return imnodes::SetImGuiContext(ctx);
 }
-CIMGUI_API Context* imnodes_CreateContext()
+CIMGUI_API ImNodesContext* imnodes_CreateContext()
 {
     return imnodes::CreateContext();
 }
-CIMGUI_API void imnodes_DestroyContext(Context* ctx)
+CIMGUI_API void imnodes_DestroyContext(ImNodesContext* ctx)
 {
     return imnodes::DestroyContext(ctx);
 }
-CIMGUI_API Context* imnodes_GetCurrentContext()
+CIMGUI_API ImNodesContext* imnodes_GetCurrentContext()
 {
     return imnodes::GetCurrentContext();
 }
-CIMGUI_API void imnodes_SetCurrentContext(Context* ctx)
+CIMGUI_API void imnodes_SetCurrentContext(ImNodesContext* ctx)
 {
     return imnodes::SetCurrentContext(ctx);
 }
-CIMGUI_API EditorContext* imnodes_EditorContextCreate()
+CIMGUI_API ImNodesEditorContext* imnodes_EditorContextCreate()
 {
     return imnodes::EditorContextCreate();
 }
-CIMGUI_API void imnodes_EditorContextFree(EditorContext* noname1)
+CIMGUI_API void imnodes_EditorContextFree(ImNodesEditorContext* noname1)
 {
     return imnodes::EditorContextFree(noname1);
 }
-CIMGUI_API void imnodes_EditorContextSet(EditorContext* noname1)
+CIMGUI_API void imnodes_EditorContextSet(ImNodesEditorContext* noname1)
 {
     return imnodes::EditorContextSet(noname1);
 }
@@ -83,11 +83,11 @@ CIMGUI_API void imnodes_EditorContextMoveToNode(const int node_id)
 {
     return imnodes::EditorContextMoveToNode(node_id);
 }
-CIMGUI_API IO* imnodes_GetIO()
+CIMGUI_API ImNodesIO* imnodes_GetIO()
 {
     return &imnodes::GetIO();
 }
-CIMGUI_API Style* imnodes_GetStyle()
+CIMGUI_API ImNodesStyle* imnodes_GetStyle()
 {
     return &imnodes::GetStyle();
 }
@@ -111,7 +111,11 @@ CIMGUI_API void imnodes_EndNodeEditor()
 {
     return imnodes::EndNodeEditor();
 }
-CIMGUI_API void imnodes_PushColorStyle(ColorStyle item,unsigned int color)
+CIMGUI_API void imnodes_MiniMap(const float minimap_size_fraction,const ImNodesMiniMapLocation location,const ImNodesMiniMapNodeHoveringCallback node_hovering_callback,void* node_hovering_callback_data)
+{
+    return imnodes::MiniMap(minimap_size_fraction,location,node_hovering_callback,node_hovering_callback_data);
+}
+CIMGUI_API void imnodes_PushColorStyle(ImNodesCol item,unsigned int color)
 {
     return imnodes::PushColorStyle(item,color);
 }
@@ -119,7 +123,7 @@ CIMGUI_API void imnodes_PopColorStyle()
 {
     return imnodes::PopColorStyle();
 }
-CIMGUI_API void imnodes_PushStyleVar(StyleVar style_item,float value)
+CIMGUI_API void imnodes_PushStyleVar(ImNodesStyleVar style_item,float value)
 {
     return imnodes::PushStyleVar(style_item,value);
 }
@@ -147,7 +151,7 @@ CIMGUI_API void imnodes_EndNodeTitleBar()
 {
     return imnodes::EndNodeTitleBar();
 }
-CIMGUI_API void imnodes_BeginInputAttribute(int id,PinShape shape)
+CIMGUI_API void imnodes_BeginInputAttribute(int id,ImNodesPinShape shape)
 {
     return imnodes::BeginInputAttribute(id,shape);
 }
@@ -155,7 +159,7 @@ CIMGUI_API void imnodes_EndInputAttribute()
 {
     return imnodes::EndInputAttribute();
 }
-CIMGUI_API void imnodes_BeginOutputAttribute(int id,PinShape shape)
+CIMGUI_API void imnodes_BeginOutputAttribute(int id,ImNodesPinShape shape)
 {
     return imnodes::BeginOutputAttribute(id,shape);
 }
@@ -171,7 +175,7 @@ CIMGUI_API void imnodes_EndStaticAttribute()
 {
     return imnodes::EndStaticAttribute();
 }
-CIMGUI_API void imnodes_PushAttributeFlag(AttributeFlags flag)
+CIMGUI_API void imnodes_PushAttributeFlag(ImNodesAttributeFlags flag)
 {
     return imnodes::PushAttributeFlag(flag);
 }
@@ -243,13 +247,37 @@ CIMGUI_API void imnodes_GetSelectedLinks(int* link_ids)
 {
     return imnodes::GetSelectedLinks(link_ids);
 }
-CIMGUI_API void imnodes_ClearNodeSelection()
+CIMGUI_API void imnodes_ClearNodeSelection_Nil()
 {
     return imnodes::ClearNodeSelection();
 }
-CIMGUI_API void imnodes_ClearLinkSelection()
+CIMGUI_API void imnodes_ClearLinkSelection_Nil()
 {
     return imnodes::ClearLinkSelection();
+}
+CIMGUI_API void imnodes_SelectNode(int node_id)
+{
+    return imnodes::SelectNode(node_id);
+}
+CIMGUI_API void imnodes_ClearNodeSelection_Int(int node_id)
+{
+    return imnodes::ClearNodeSelection(node_id);
+}
+CIMGUI_API bool imnodes_IsNodeSelected(int node_id)
+{
+    return imnodes::IsNodeSelected(node_id);
+}
+CIMGUI_API void imnodes_SelectLink(int link_id)
+{
+    return imnodes::SelectLink(link_id);
+}
+CIMGUI_API void imnodes_ClearLinkSelection_Int(int link_id)
+{
+    return imnodes::ClearLinkSelection(link_id);
+}
+CIMGUI_API bool imnodes_IsLinkSelected(int link_id)
+{
+    return imnodes::IsLinkSelected(link_id);
 }
 CIMGUI_API bool imnodes_IsAttributeActive()
 {
@@ -283,7 +311,7 @@ CIMGUI_API const char* imnodes_SaveCurrentEditorStateToIniString(size_t* data_si
 {
     return imnodes::SaveCurrentEditorStateToIniString(data_size);
 }
-CIMGUI_API const char* imnodes_SaveEditorStateToIniString(const EditorContext* editor,size_t* data_size)
+CIMGUI_API const char* imnodes_SaveEditorStateToIniString(const ImNodesEditorContext* editor,size_t* data_size)
 {
     return imnodes::SaveEditorStateToIniString(editor,data_size);
 }
@@ -291,7 +319,7 @@ CIMGUI_API void imnodes_LoadCurrentEditorStateFromIniString(const char* data,siz
 {
     return imnodes::LoadCurrentEditorStateFromIniString(data,data_size);
 }
-CIMGUI_API void imnodes_LoadEditorStateFromIniString(EditorContext* editor,const char* data,size_t data_size)
+CIMGUI_API void imnodes_LoadEditorStateFromIniString(ImNodesEditorContext* editor,const char* data,size_t data_size)
 {
     return imnodes::LoadEditorStateFromIniString(editor,data,data_size);
 }
@@ -299,7 +327,7 @@ CIMGUI_API void imnodes_SaveCurrentEditorStateToIniFile(const char* file_name)
 {
     return imnodes::SaveCurrentEditorStateToIniFile(file_name);
 }
-CIMGUI_API void imnodes_SaveEditorStateToIniFile(const EditorContext* editor,const char* file_name)
+CIMGUI_API void imnodes_SaveEditorStateToIniFile(const ImNodesEditorContext* editor,const char* file_name)
 {
     return imnodes::SaveEditorStateToIniFile(editor,file_name);
 }
@@ -307,7 +335,7 @@ CIMGUI_API void imnodes_LoadCurrentEditorStateFromIniFile(const char* file_name)
 {
     return imnodes::LoadCurrentEditorStateFromIniFile(file_name);
 }
-CIMGUI_API void imnodes_LoadEditorStateFromIniFile(EditorContext* editor,const char* file_name)
+CIMGUI_API void imnodes_LoadEditorStateFromIniFile(ImNodesEditorContext* editor,const char* file_name)
 {
     return imnodes::LoadEditorStateFromIniFile(editor,file_name);
 }
