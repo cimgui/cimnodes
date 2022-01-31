@@ -6,26 +6,17 @@
 #include "cimgui.h"
 
 #ifdef CIMGUI_DEFINE_ENUMS_AND_STRUCTS
-typedef struct ImNodesEditorContext ImNodesEditorContext;
-typedef struct ImNodesContext ImNodesContext;
-typedef struct ImVec2 ImVec2;
-typedef struct ImGuiContext ImGuiContext;
-typedef struct ImNodesStyle ImNodesStyle;
-typedef struct LinkDetachWithModifierClick LinkDetachWithModifierClick;
-typedef struct EmulateThreeButtonMouse EmulateThreeButtonMouse;
-typedef struct ImNodesIO ImNodesIO;
 
+typedef struct ImGuiContext ImGuiContext;
+typedef struct ImVec2 ImVec2;
+typedef struct ImNodesContext ImNodesContext;
+typedef struct ImNodesEditorContext ImNodesEditorContext;
 typedef int ImNodesCol;
 typedef int ImNodesStyleVar;
 typedef int ImNodesStyleFlags;
 typedef int ImNodesPinShape;
 typedef int ImNodesAttributeFlags;
 typedef int ImNodesMiniMapLocation;
-struct ImGuiContext;
-struct ImVec2;
-struct ImNodesContext;
-struct ImNodesEditorContext;
-typedef void (*ImNodesMiniMapNodeHoveringCallback)(int, void*);
 typedef enum {
     ImNodesCol_NodeBackground = 0,
     ImNodesCol_NodeBackgroundHovered,
@@ -89,20 +80,28 @@ typedef enum {
     ImNodesAttributeFlags_EnableLinkDetachWithDragClick = 1 << 0,
     ImNodesAttributeFlags_EnableLinkCreationOnSnap = 1 << 1
 }ImNodesAttributeFlags_;
+typedef struct ImNodesIO ImNodesIO;
 struct EmulateThreeButtonMouse
 {
         const bool* Modifier;
 };
+typedef struct EmulateThreeButtonMouse EmulateThreeButtonMouse;
+
 struct LinkDetachWithModifierClick
 {
         const bool* Modifier;
 };
+typedef struct LinkDetachWithModifierClick LinkDetachWithModifierClick;
+
 struct ImNodesIO
 {
     EmulateThreeButtonMouse EmulateThreeButtonMouse;
     LinkDetachWithModifierClick LinkDetachWithModifierClick;
     int AltMouseButton;
 };
+typedef struct EmulateThreeButtonMouse EmulateThreeButtonMouse;
+typedef struct LinkDetachWithModifierClick LinkDetachWithModifierClick;
+typedef struct ImNodesStyle ImNodesStyle;
 struct ImNodesStyle
 {
     float GridSpacing;
@@ -128,6 +127,11 @@ typedef enum {
     ImNodesMiniMapLocation_TopLeft,
     ImNodesMiniMapLocation_TopRight,
 }ImNodesMiniMapLocation_;
+struct ImGuiContext;
+struct ImVec2;
+struct ImNodesContext;
+struct ImNodesEditorContext;
+typedef void (*ImNodesMiniMapNodeHoveringCallback)(int, void*);
 #else
 #endif // CIMGUI_DEFINE_ENUMS_AND_STRUCTS
 
