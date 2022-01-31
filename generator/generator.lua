@@ -152,7 +152,7 @@ parser1:do_parse()
 save_data("./output/overloads.txt",parser1.overloadstxt)
 cimgui_generation(parser1,modulename)
 save_data("./output/definitions.lua",serializeTableF(parser1.defsT))
-local structs_and_enums_table = parser1:gen_structs_and_enums_table()
+local structs_and_enums_table = parser1.structs_and_enums_table
 save_data("./output/structs_and_enums.lua",serializeTableF(structs_and_enums_table))
 save_data("./output/typedefs_dict.lua",serializeTableF(parser1.typedefs_dict))
 
