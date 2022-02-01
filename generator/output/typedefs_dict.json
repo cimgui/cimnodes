@@ -8,6 +8,7 @@
   "ImNodesIO": "struct ImNodesIO",
   "ImNodesMiniMapLocation": "int",
   "ImNodesMiniMapNodeHoveringCallback": "void(*)(int,void*);",
+  "ImNodesMiniMapNodeHoveringCallbackUserData": "void*",
   "ImNodesPinShape": "int",
   "ImNodesStyle": "struct ImNodesStyle",
   "ImNodesStyleFlags": "int",

@@ -150,8 +150,18 @@
       },
       {
         "calc_value": 26,
-        "name": "ImNodesCol_COUNT",
+        "name": "ImNodesCol_MiniMapCanvas",
         "value": "26"
+      },
+      {
+        "calc_value": 27,
+        "name": "ImNodesCol_MiniMapCanvasOutline",
+        "value": "27"
+      },
+      {
+        "calc_value": 28,
+        "name": "ImNodesCol_COUNT",
+        "value": "28"
       }
     ],
     "ImNodesMiniMapLocation_": [
@@ -238,78 +248,88 @@
       },
       {
         "calc_value": 2,
-        "name": "ImNodesStyleVar_NodePaddingHorizontal",
+        "name": "ImNodesStyleVar_NodePadding",
         "value": "2"
       },
       {
         "calc_value": 3,
-        "name": "ImNodesStyleVar_NodePaddingVertical",
+        "name": "ImNodesStyleVar_NodeBorderThickness",
         "value": "3"
       },
       {
         "calc_value": 4,
-        "name": "ImNodesStyleVar_NodeBorderThickness",
+        "name": "ImNodesStyleVar_LinkThickness",
         "value": "4"
       },
       {
         "calc_value": 5,
-        "name": "ImNodesStyleVar_LinkThickness",
+        "name": "ImNodesStyleVar_LinkLineSegmentsPerLength",
         "value": "5"
       },
       {
         "calc_value": 6,
-        "name": "ImNodesStyleVar_LinkLineSegmentsPerLength",
+        "name": "ImNodesStyleVar_LinkHoverDistance",
         "value": "6"
       },
       {
         "calc_value": 7,
-        "name": "ImNodesStyleVar_LinkHoverDistance",
+        "name": "ImNodesStyleVar_PinCircleRadius",
         "value": "7"
       },
       {
         "calc_value": 8,
-        "name": "ImNodesStyleVar_PinCircleRadius",
+        "name": "ImNodesStyleVar_PinQuadSideLength",
         "value": "8"
       },
       {
         "calc_value": 9,
-        "name": "ImNodesStyleVar_PinQuadSideLength",
+        "name": "ImNodesStyleVar_PinTriangleSideLength",
         "value": "9"
       },
       {
         "calc_value": 10,
-        "name": "ImNodesStyleVar_PinTriangleSideLength",
+        "name": "ImNodesStyleVar_PinLineThickness",
         "value": "10"
       },
       {
         "calc_value": 11,
-        "name": "ImNodesStyleVar_PinLineThickness",
+        "name": "ImNodesStyleVar_PinHoverRadius",
         "value": "11"
       },
       {
         "calc_value": 12,
-        "name": "ImNodesStyleVar_PinHoverRadius",
+        "name": "ImNodesStyleVar_PinOffset",
         "value": "12"
       },
       {
         "calc_value": 13,
-        "name": "ImNodesStyleVar_PinOffset",
+        "name": "ImNodesStyleVar_MiniMapPadding",
         "value": "13"
+      },
+      {
+        "calc_value": 14,
+        "name": "ImNodesStyleVar_MiniMapOffset",
+        "value": "14"
+      },
+      {
+        "calc_value": 15,
+        "name": "ImNodesStyleVar_COUNT",
+        "value": "15"
       }
     ]
   },
   "enumtypes": [],
   "locations": {
-    "EmulateThreeButtonMouse": "imnodes:100",
-    "ImNodesAttributeFlags_": "imnodes:83",
-    "ImNodesCol_": "imnodes:16",
-    "ImNodesIO": "imnodes:98",
-    "ImNodesMiniMapLocation_": "imnodes:177",
-    "ImNodesPinShape_": "imnodes:72",
-    "ImNodesStyle": "imnodes:135",
-    "ImNodesStyleFlags_": "imnodes:65",
-    "ImNodesStyleVar_": "imnodes:47",
-    "LinkDetachWithModifierClick": "imnodes:112"
+    "EmulateThreeButtonMouse": "imnodes:109",
+    "ImNodesAttributeFlags_": "imnodes:92",
+    "ImNodesCol_": "imnodes:21",
+    "ImNodesIO": "imnodes:107",
+    "ImNodesMiniMapLocation_": "imnodes:193",
+    "ImNodesPinShape_": "imnodes:81",
+    "ImNodesStyle": "imnodes:147",
+    "ImNodesStyleFlags_": "imnodes:74",
+    "ImNodesStyleVar_": "imnodes:54",
+    "LinkDetachWithModifierClick": "imnodes:121"
   },
   "structs": {
     "EmulateThreeButtonMouse": [
@@ -330,6 +350,10 @@
       {
         "name": "AltMouseButton",
         "type": "int"
+      },
+      {
+        "name": "AutoPanningSpeed",
+        "type": "float"
       }
     ],
     "ImNodesStyle": [
@@ -342,12 +366,8 @@
         "type": "float"
       },
       {
-        "name": "NodePaddingHorizontal",
-        "type": "float"
-      },
-      {
-        "name": "NodePaddingVertical",
-        "type": "float"
+        "name": "NodePadding",
+        "type": "ImVec2"
       },
       {
         "name": "NodeBorderThickness",
@@ -390,12 +410,20 @@
         "type": "float"
       },
       {
+        "name": "MiniMapPadding",
+        "type": "ImVec2"
+      },
+      {
+        "name": "MiniMapOffset",
+        "type": "ImVec2"
+      },
+      {
         "name": "Flags",
         "type": "ImNodesStyleFlags"
       },
       {
         "name": "Colors[ImNodesCol_COUNT]",
-        "size": 26,
+        "size": 28,
         "type": "unsigned int"
       }
     ],

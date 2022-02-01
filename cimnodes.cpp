@@ -111,7 +111,7 @@ CIMGUI_API void imnodes_EndNodeEditor()
 {
     return imnodes::EndNodeEditor();
 }
-CIMGUI_API void imnodes_MiniMap(const float minimap_size_fraction,const ImNodesMiniMapLocation location,const ImNodesMiniMapNodeHoveringCallback node_hovering_callback,void* node_hovering_callback_data)
+CIMGUI_API void imnodes_MiniMap(const float minimap_size_fraction,const ImNodesMiniMapLocation location,const ImNodesMiniMapNodeHoveringCallback node_hovering_callback,const ImNodesMiniMapNodeHoveringCallbackUserData node_hovering_callback_data)
 {
     return imnodes::MiniMap(minimap_size_fraction,location,node_hovering_callback,node_hovering_callback_data);
 }
@@ -123,13 +123,17 @@ CIMGUI_API void imnodes_PopColorStyle()
 {
     return imnodes::PopColorStyle();
 }
-CIMGUI_API void imnodes_PushStyleVar(ImNodesStyleVar style_item,float value)
+CIMGUI_API void imnodes_PushStyleVar_Float(ImNodesStyleVar style_item,float value)
 {
     return imnodes::PushStyleVar(style_item,value);
 }
-CIMGUI_API void imnodes_PopStyleVar()
+CIMGUI_API void imnodes_PushStyleVar_Vec2(ImNodesStyleVar style_item,const ImVec2 value)
 {
-    return imnodes::PopStyleVar();
+    return imnodes::PushStyleVar(style_item,value);
+}
+CIMGUI_API void imnodes_PopStyleVar(int count)
+{
+    return imnodes::PopStyleVar(count);
 }
 CIMGUI_API void imnodes_BeginNode(int id)
 {
