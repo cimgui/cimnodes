@@ -377,7 +377,7 @@
       "call_args": "(ctx)",
       "cimguiname": "imnodes_DestroyContext",
       "defaults": {
-        "ctx": "((void*)0)"
+        "ctx": "NULL"
       },
       "funcname": "DestroyContext",
       "location": "imnodes:229",
@@ -836,7 +836,7 @@
       "call_args": "(attribute_id)",
       "cimguiname": "imnodes_IsAnyAttributeActive",
       "defaults": {
-        "attribute_id": "((void*)0)"
+        "attribute_id": "NULL"
       },
       "funcname": "IsAnyAttributeActive",
       "location": "imnodes:370",
@@ -902,7 +902,7 @@
       "call_args": "(started_at_attribute_id,ended_at_attribute_id,created_from_snap)",
       "cimguiname": "imnodes_IsLinkCreated",
       "defaults": {
-        "created_from_snap": "((void*)0)"
+        "created_from_snap": "NULL"
       },
       "funcname": "IsLinkCreated",
       "location": "imnodes:385",
@@ -940,7 +940,7 @@
       "call_args": "(started_at_node_id,started_at_attribute_id,ended_at_node_id,ended_at_attribute_id,created_from_snap)",
       "cimguiname": "imnodes_IsLinkCreated",
       "defaults": {
-        "created_from_snap": "((void*)0)"
+        "created_from_snap": "NULL"
       },
       "funcname": "IsLinkCreated",
       "location": "imnodes:389",
@@ -991,7 +991,7 @@
       "cimguiname": "imnodes_IsLinkDropped",
       "defaults": {
         "including_detached_links": "true",
-        "started_at_attribute_id": "((void*)0)"
+        "started_at_attribute_id": "NULL"
       },
       "funcname": "IsLinkDropped",
       "location": "imnodes:383",
@@ -1295,8 +1295,8 @@
       "defaults": {
         "location": "ImNodesMiniMapLocation_TopLeft",
         "minimap_size_fraction": "0.2f",
-        "node_hovering_callback": "((void*)0)",
-        "node_hovering_callback_data": "((void*)0)"
+        "node_hovering_callback": "NULL",
+        "node_hovering_callback_data": "NULL"
       },
       "funcname": "MiniMap",
       "location": "imnodes:256",
@@ -1532,7 +1532,7 @@
       "call_args": "(data_size)",
       "cimguiname": "imnodes_SaveCurrentEditorStateToIniString",
       "defaults": {
-        "data_size": "((void*)0)"
+        "data_size": "NULL"
       },
       "funcname": "SaveCurrentEditorStateToIniString",
       "location": "imnodes:403",
@@ -1586,7 +1586,7 @@
       "call_args": "(editor,data_size)",
       "cimguiname": "imnodes_SaveEditorStateToIniString",
       "defaults": {
-        "data_size": "((void*)0)"
+        "data_size": "NULL"
       },
       "funcname": "SaveEditorStateToIniString",
       "location": "imnodes:404",
