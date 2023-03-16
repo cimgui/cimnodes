@@ -15,5 +15,6 @@ defs["ImNodesStyleFlags"] = "int"
 defs["ImNodesStyleVar"] = "int"
 defs["ImVec2"] = "struct ImVec2"
 defs["LinkDetachWithModifierClick"] = "struct LinkDetachWithModifierClick"
+defs["MultipleSelectModifier"] = "struct MultipleSelectModifier"
 
 return defs

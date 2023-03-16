@@ -23,6 +23,14 @@ CIMGUI_API void LinkDetachWithModifierClick_destroy(LinkDetachWithModifierClick*
 {
     IM_DELETE(self);
 }
+CIMGUI_API MultipleSelectModifier* MultipleSelectModifier_MultipleSelectModifier(void)
+{
+    return IM_NEW(MultipleSelectModifier)();
+}
+CIMGUI_API void MultipleSelectModifier_destroy(MultipleSelectModifier* self)
+{
+    IM_DELETE(self);
+}
 CIMGUI_API ImNodesIO* ImNodesIO_ImNodesIO(void)
 {
     return IM_NEW(ImNodesIO)();
@@ -91,17 +99,17 @@ CIMGUI_API ImNodesStyle* imnodes_GetStyle()
 {
     return &imnodes::GetStyle();
 }
-CIMGUI_API void imnodes_StyleColorsDark()
+CIMGUI_API void imnodes_StyleColorsDark(ImNodesStyle* dest)
 {
-    return imnodes::StyleColorsDark();
+    return imnodes::StyleColorsDark(dest);
 }
-CIMGUI_API void imnodes_StyleColorsClassic()
+CIMGUI_API void imnodes_StyleColorsClassic(ImNodesStyle* dest)
 {
-    return imnodes::StyleColorsClassic();
+    return imnodes::StyleColorsClassic(dest);
 }
-CIMGUI_API void imnodes_StyleColorsLight()
+CIMGUI_API void imnodes_StyleColorsLight(ImNodesStyle* dest)
 {
-    return imnodes::StyleColorsLight();
+    return imnodes::StyleColorsLight(dest);
 }
 CIMGUI_API void imnodes_BeginNodeEditor()
 {
@@ -218,6 +226,10 @@ CIMGUI_API void imnodes_GetNodeEditorSpacePos(ImVec2 *pOut,const int node_id)
 CIMGUI_API void imnodes_GetNodeGridSpacePos(ImVec2 *pOut,const int node_id)
 {
     *pOut = imnodes::GetNodeGridSpacePos(node_id);
+}
+CIMGUI_API void imnodes_SnapNodeToGrid(int node_id)
+{
+    return imnodes::SnapNodeToGrid(node_id);
 }
 CIMGUI_API bool imnodes_IsEditorHovered()
 {

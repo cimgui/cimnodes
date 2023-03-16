@@ -14,5 +14,6 @@
   "ImNodesStyleFlags": "int",
   "ImNodesStyleVar": "int",
   "ImVec2": "struct ImVec2",
-  "LinkDetachWithModifierClick": "struct LinkDetachWithModifierClick"
+  "LinkDetachWithModifierClick": "struct LinkDetachWithModifierClick",
+  "MultipleSelectModifier": "struct MultipleSelectModifier"
 }

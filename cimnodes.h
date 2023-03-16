@@ -34,6 +34,7 @@ typedef enum {
     ImNodesCol_BoxSelectorOutline,
     ImNodesCol_GridBackground,
     ImNodesCol_GridLine,
+    ImNodesCol_GridLinePrimary,
     ImNodesCol_MiniMapBackground,
     ImNodesCol_MiniMapBackgroundHovered,
     ImNodesCol_MiniMapOutline,
@@ -69,7 +70,9 @@ typedef enum {
 typedef enum {
     ImNodesStyleFlags_None = 0,
     ImNodesStyleFlags_NodeOutline = 1 << 0,
-    ImNodesStyleFlags_GridLines = 1 << 2
+    ImNodesStyleFlags_GridLines = 1 << 2,
+    ImNodesStyleFlags_GridLinesPrimary = 1 << 3,
+    ImNodesStyleFlags_GridSnapping = 1 << 4
 }ImNodesStyleFlags_;
 typedef enum {
     ImNodesPinShape_Circle,
@@ -97,15 +100,23 @@ struct LinkDetachWithModifierClick
 };
 typedef struct LinkDetachWithModifierClick LinkDetachWithModifierClick;
 
+struct MultipleSelectModifier
+{
+        const bool* Modifier;
+};
+typedef struct MultipleSelectModifier MultipleSelectModifier;
+
 struct ImNodesIO
 {
     EmulateThreeButtonMouse EmulateThreeButtonMouse;
     LinkDetachWithModifierClick LinkDetachWithModifierClick;
+    MultipleSelectModifier MultipleSelectModifier;
     int AltMouseButton;
     float AutoPanningSpeed;
 };
 typedef struct EmulateThreeButtonMouse EmulateThreeButtonMouse;
 typedef struct LinkDetachWithModifierClick LinkDetachWithModifierClick;
+typedef struct MultipleSelectModifier MultipleSelectModifier;
 typedef struct ImNodesStyle ImNodesStyle;
 struct ImNodesStyle
 {
@@ -145,11 +156,14 @@ typedef void* ImNodesMiniMapNodeHoveringCallbackUserData;
 #ifndef CIMGUI_DEFINE_ENUMS_AND_STRUCTS
 typedef struct ImNodesIO::EmulateThreeButtonMouse EmulateThreeButtonMouse;
 typedef struct ImNodesIO::LinkDetachWithModifierClick LinkDetachWithModifierClick;
+typedef struct ImNodesIO::MultipleSelectModifier MultipleSelectModifier;
 #endif //CIMGUI_DEFINE_ENUMS_AND_STRUCTS
 CIMGUI_API EmulateThreeButtonMouse* EmulateThreeButtonMouse_EmulateThreeButtonMouse(void);
 CIMGUI_API void EmulateThreeButtonMouse_destroy(EmulateThreeButtonMouse* self);
 CIMGUI_API LinkDetachWithModifierClick* LinkDetachWithModifierClick_LinkDetachWithModifierClick(void);
 CIMGUI_API void LinkDetachWithModifierClick_destroy(LinkDetachWithModifierClick* self);
+CIMGUI_API MultipleSelectModifier* MultipleSelectModifier_MultipleSelectModifier(void);
+CIMGUI_API void MultipleSelectModifier_destroy(MultipleSelectModifier* self);
 CIMGUI_API ImNodesIO* ImNodesIO_ImNodesIO(void);
 CIMGUI_API void ImNodesIO_destroy(ImNodesIO* self);
 CIMGUI_API ImNodesStyle* ImNodesStyle_ImNodesStyle(void);
@@ -167,9 +181,9 @@ CIMGUI_API void imnodes_EditorContextResetPanning(const ImVec2 pos);
 CIMGUI_API void imnodes_EditorContextMoveToNode(const int node_id);
 CIMGUI_API ImNodesIO* imnodes_GetIO(void);
 CIMGUI_API ImNodesStyle* imnodes_GetStyle(void);
-CIMGUI_API void imnodes_StyleColorsDark(void);
-CIMGUI_API void imnodes_StyleColorsClassic(void);
-CIMGUI_API void imnodes_StyleColorsLight(void);
+CIMGUI_API void imnodes_StyleColorsDark(ImNodesStyle* dest);
+CIMGUI_API void imnodes_StyleColorsClassic(ImNodesStyle* dest);
+CIMGUI_API void imnodes_StyleColorsLight(ImNodesStyle* dest);
 CIMGUI_API void imnodes_BeginNodeEditor(void);
 CIMGUI_API void imnodes_EndNodeEditor(void);
 CIMGUI_API void imnodes_MiniMap(const float minimap_size_fraction,const ImNodesMiniMapLocation location,const ImNodesMiniMapNodeHoveringCallback node_hovering_callback,const ImNodesMiniMapNodeHoveringCallbackUserData node_hovering_callback_data);
@@ -199,6 +213,7 @@ CIMGUI_API void imnodes_SetNodeGridSpacePos(int node_id,const ImVec2 grid_pos);
 CIMGUI_API void imnodes_GetNodeScreenSpacePos(ImVec2 *pOut,const int node_id);
 CIMGUI_API void imnodes_GetNodeEditorSpacePos(ImVec2 *pOut,const int node_id);
 CIMGUI_API void imnodes_GetNodeGridSpacePos(ImVec2 *pOut,const int node_id);
+CIMGUI_API void imnodes_SnapNodeToGrid(int node_id);
 CIMGUI_API bool imnodes_IsEditorHovered(void);
 CIMGUI_API bool imnodes_IsNodeHovered(int* node_id);
 CIMGUI_API bool imnodes_IsLinkHovered(int* link_id);
