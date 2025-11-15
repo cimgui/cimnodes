@@ -8,6 +8,8 @@
 #else
 #endif // CIMGUI_DEFINE_ENUMS_AND_STRUCTS
 
+PLACE_STRUCTS_C
+
 #include "auto_funcs.h"
 
 //needed for io.link_detach_with_modifier_click.modifier = &ImGui::GetIO().KeyCtrl
