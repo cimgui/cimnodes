@@ -445,6 +445,9 @@
     "LinkDetachWithModifierClick": true,
     "MultipleSelectModifier": true
   },
+  "nonPOD_used": {
+    "ImVec2": "inherited"
+  },
   "structs": {
     "EmulateThreeButtonMouse": [
       {
