@@ -124,6 +124,10 @@ CIMGUI_API void imnodes_StyleColorsLight(ImNodesStyle* dest)
 {
     return imnodes::StyleColorsLight(dest);
 }
+CIMGUI_API const char* imnodes_GetStyleColorName(ImNodesCol idx)
+{
+    return imnodes::GetStyleColorName(idx);
+}
 CIMGUI_API void imnodes_BeginNodeEditor()
 {
     return imnodes::BeginNodeEditor();

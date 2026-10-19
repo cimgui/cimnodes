@@ -188,6 +188,7 @@ CIMGUI_API ImNodesStyle* imnodes_GetStyle(void);
 CIMGUI_API void imnodes_StyleColorsDark(ImNodesStyle* dest);
 CIMGUI_API void imnodes_StyleColorsClassic(ImNodesStyle* dest);
 CIMGUI_API void imnodes_StyleColorsLight(ImNodesStyle* dest);
+CIMGUI_API const char* imnodes_GetStyleColorName(ImNodesCol idx);
 CIMGUI_API void imnodes_BeginNodeEditor(void);
 CIMGUI_API void imnodes_EndNodeEditor(void);
 CIMGUI_API void imnodes_MiniMap(const float minimap_size_fraction,const ImNodesMiniMapLocation location,const ImNodesMiniMapNodeHoveringCallback node_hovering_callback,const ImNodesMiniMapNodeHoveringCallbackUserData node_hovering_callback_data);
